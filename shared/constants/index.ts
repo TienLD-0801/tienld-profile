@@ -4,3 +4,6 @@ export const DATE_DIFF = {
   AM: 'AM',
   PM: 'PM',
 };
+
+// Color Icon Social network
+export const SOCIAL_NETWORK_COLOR = '#c561f6';
