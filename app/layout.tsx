@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
+import { LayoutGroup } from 'framer-motion';
 import Head from 'next/head';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
-import { LayoutGroup } from 'framer-motion';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -36,7 +37,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <LayoutGroup>{children}</LayoutGroup>
+        <LayoutGroup>
+          {children}
+          <SpeedInsights />
+        </LayoutGroup>
       </body>
     </html>
   );

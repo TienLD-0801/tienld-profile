@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MAX_TIME, TIME_INTERVAL } from '@/shared/constants';
+import { DATE_DIFF, MAX_TIME, TIME_INTERVAL } from '@/shared/constants';
 import { useRouter } from 'next/navigation';
+import { PAGE_ROUTES } from '@/shared/constants/router';
 
 export default function SplashScreen() {
   const router = useRouter();
@@ -22,15 +23,14 @@ export default function SplashScreen() {
   const hours = formatTime(time.getHours() % MAX_TIME || MAX_TIME);
   const minutes = formatTime(time.getMinutes());
   const seconds = formatTime(time.getSeconds());
-  const ampm = time.getHours() >= MAX_TIME ? 'PM' : 'AM';
+  const ampm = time.getHours() >= MAX_TIME ? DATE_DIFF.AM : DATE_DIFF.PM;
   const date = time.toDateString();
 
   const handleStart = () => {
-    console.log('Start');
     setIsExiting(true);
     setTimeout(() => {
-      router.push('/portfolio');
-    }, 500);
+      router.push(PAGE_ROUTES.PORTFOLIO);
+    }, 400);
   };
 
   return (
@@ -46,14 +46,14 @@ export default function SplashScreen() {
           <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-blue-500 to-purple-600 opacity-20 blur-2xl z-0"></div>
 
           <motion.div
-            className="text-2xl font-bold mb-4 tracking-wider text-red-400 uppercase"
+            className="text-5xl font-bold mb-4 tracking-wider text-red-400 uppercase"
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             {date}
           </motion.div>
 
-          <div className="flex space-x-2 text-9xl font-extrabold tracking-wider">
+          <div className="flex space-x-3 text-9xl font-extrabold tracking-wider">
             <motion.div
               className="digit"
               animate={{ color: ['#ff0000', '#00ffcc', '#ffff00', '#ff00ff'] }}
@@ -91,7 +91,7 @@ export default function SplashScreen() {
           </div>
 
           <motion.button
-            className="mt-20 px-10 py-4 bg-gradient-to-r from-red-600 to-blue-500 text-white text-xl font-extrabold rounded-lg shadow-md tracking-wider uppercase border border-white cursor-pointer z-10"
+            className="mt-16 px-10 py-4 bg-gradient-to-r from-red-600 to-blue-500 text-white text-xl font-extrabold rounded-lg shadow-md tracking-wider uppercase border border-white cursor-pointer z-10"
             animate={{
               y: [0, -10, 0],
               scale: [1, 1.05, 1],

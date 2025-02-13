@@ -2,8 +2,11 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Moon, Sun, SquareTerminal } from 'lucide-react';
+import { SquareTerminal } from 'lucide-react';
 import Image from 'next/image';
+import ControlPanel from '@/components/ControlPanel/ControlPanel';
+import { useRouter } from 'next/navigation';
+import { PAGE_ROUTES } from '@/shared/constants/router';
 
 const portfolioItems = [
   {
@@ -26,6 +29,7 @@ const portfolioItems = [
 ];
 
 export default function PortfolioPage() {
+  const router = useRouter();
   const [darkMode, setDarkMode] = useState(false);
 
   return (
@@ -35,16 +39,20 @@ export default function PortfolioPage() {
       } min-h-screen transition-all duration-500`}
     >
       <header className="p-3 flex justify-between items-center shadow-md">
-        <div className="flex items-center gap-2">
-          <SquareTerminal color="#c561f6" size={24} />
-          <span className="text-2xl font-bold tracking-wide">My Portfolio</span>
-        </div>
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="p-2 rounded-full bg-gray-800 text-white flex items-center justify-center shadow-md hover:bg-gray-700 transition-all"
+        <div
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => router.push(PAGE_ROUTES.ROOT)}
         >
-          {darkMode ? <Sun size={24} /> : <Moon size={24} />}
-        </button>
+          <SquareTerminal color="#c561f6" size={24} />
+          <span className="text-2xl font-bold tracking-wide">Portfolio</span>
+        </div>
+        <ControlPanel
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+          changeLanguage={function (): void {
+            throw new Error('Function not implemented.');
+          }}
+        />
       </header>
 
       <section className="p-6 text-center">
@@ -56,9 +64,7 @@ export default function PortfolioPage() {
           transition={{ duration: 2, repeat: Infinity }}
         />
         <h2 className="text-3xl font-semibold mt-4">Le Duy Tien</h2>
-        <p className="text-gray-500 text-lg">
-          Full Stack Developer | AI Enthusiast
-        </p>
+        <p className="text-gray-500 text-lg">Full Stack Developer</p>
       </section>
 
       <section className="p-6 max-w-5xl mx-auto">
