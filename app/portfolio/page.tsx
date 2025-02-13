@@ -34,7 +34,7 @@ export default function PortfolioPage() {
         darkMode ? 'bg-black text-white' : 'bg-gray-100 text-black'
       } min-h-screen transition-all duration-500`}
     >
-      <header className="p-6 flex justify-between items-center shadow-md">
+      <header className="p-3 flex justify-between items-center shadow-md">
         <div className="flex items-center gap-2">
           <SquareTerminal color="#c561f6" size={24} />
           <span className="text-2xl font-bold tracking-wide">My Portfolio</span>

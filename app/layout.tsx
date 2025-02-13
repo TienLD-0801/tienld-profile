@@ -1,6 +1,8 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import Head from 'next/head';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { LayoutGroup } from 'framer-motion';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -13,8 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Profile',
-  description: 'My profile',
+  title: 'Welcome to my profile !!!',
+  description: 'Welcome to my profile!',
+  icons: {
+    icon: '/globe.svg',
+  },
 };
 
 export default function RootLayout({
@@ -24,10 +29,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <LayoutGroup>{children}</LayoutGroup>
       </body>
     </html>
   );
