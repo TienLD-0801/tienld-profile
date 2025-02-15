@@ -20,17 +20,19 @@ export default function SplashScreen() {
   if (!time) return null;
 
   const formatTime = (num: number) => num.toString().padStart(2, '0');
-  const hours = formatTime(time.getHours() % MAX_TIME || MAX_TIME);
+  const hours24 = time.getHours();
+  const hours12 = hours24 % MAX_TIME || MAX_TIME;
+  const ampm = hours24 >= MAX_TIME ? DATE_DIFF.PM : DATE_DIFF.AM;
+  const hours = formatTime(hours12);
   const minutes = formatTime(time.getMinutes());
   const seconds = formatTime(time.getSeconds());
-  const ampm = time.getHours() >= MAX_TIME ? DATE_DIFF.AM : DATE_DIFF.PM;
   const date = time.toDateString();
 
   const handleStart = () => {
     setIsExiting(true);
     setTimeout(() => {
       router.push(PAGE_ROUTES.PORTFOLIO);
-    }, 400);
+    }, 300);
   };
 
   return (
