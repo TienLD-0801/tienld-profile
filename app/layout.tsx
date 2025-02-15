@@ -3,6 +3,7 @@ import { LayoutGroup } from 'framer-motion';
 import Head from 'next/head';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Providers } from './providers';
 import './globals.css';
 
 const geistSans = Geist({
@@ -29,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,10 +38,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <LayoutGroup>
-          {children}
-          <SpeedInsights />
-        </LayoutGroup>
+        <Providers>
+          <LayoutGroup>
+            {children}
+            <SpeedInsights />
+          </LayoutGroup>
+        </Providers>
       </body>
     </html>
   );

@@ -1,71 +1,107 @@
 'use client';
 
-import { SOCIAL_NETWORK_COLOR } from '@/shared/constants';
+import {
+  DARK_MODE,
+  LIGHT_MODE,
+  SOCIAL_NETWORK_COLOR,
+} from '@/shared/constants';
+import { PAGE_ROUTES } from '@/shared/constants/router';
 import { motion } from 'framer-motion';
-import { Facebook, Github, Linkedin } from 'lucide-react';
+import { Facebook, Github, Linkedin, Moon, Sun, Terminal } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-interface ControlPanelProps {
-  darkMode: boolean;
-  setDarkMode: (darkMode: boolean) => void;
-}
+export default function ControlPanel() {
+  const router = useRouter();
+  const { setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-export default function ControlPanel({
-  darkMode,
-  setDarkMode,
-}: ControlPanelProps) {
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
   return (
-    <div className="flex space-x-4">
-      <motion.div className="flex space-x-4 items-center">
+    <div className="flex space-x-4 items-center justify-between">
+      <header className="p-3 flex justify-between items-center">
         <motion.div
-          whileHover={{ scale: 1.2, rotate: 5 }}
-          transition={{ type: 'spring', stiffness: 300 }}
-          className="cursor-pointer"
-          onClick={() =>
-            window.open('https://www.linkedin.com/in/tienld', '_blank')
-          }
+          whileHover={{ scale: 1.05 }}
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => router.push(PAGE_ROUTES.ROOT)}
         >
-          <Linkedin color={SOCIAL_NETWORK_COLOR} size={24} />
+          <motion.div>
+            <Terminal color={SOCIAL_NETWORK_COLOR} size={24} />
+          </motion.div>
+          <motion.span className="text-2xl font-bold tracking-wide whitespace-pre">
+            Welcome 🚀🚀🚀
+          </motion.span>
+        </motion.div>
+      </header>
+      <motion.div className="flex items-center justify-center space-x-6">
+        {/* Social Icons */}
+        <motion.div className="flex space-x-4">
+          {[
+            {
+              id: 'linkedin',
+              icon: Linkedin,
+              link: 'https://www.linkedin.com/in/tienld',
+            },
+            {
+              id: 'facebook',
+              icon: Facebook,
+              link: 'https://www.facebook.com/leduytien0801/?locale=vi_VN',
+            },
+            {
+              id: 'github',
+              icon: Github,
+              link: 'https://github.com/TienLD-0801',
+            },
+          ].map(({ id, icon: Icon, link }) => (
+            <motion.div
+              key={id}
+              whileHover={{ scale: 1.2, rotate: id === 'facebook' ? -5 : 5 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              className="cursor-pointer"
+              onClick={() => window.open(link, '_blank')}
+            >
+              <Icon color={SOCIAL_NETWORK_COLOR} size={24} />
+            </motion.div>
+          ))}
         </motion.div>
 
-        <motion.div
-          whileHover={{ scale: 1.2, rotate: -5 }}
-          transition={{ type: 'spring', stiffness: 300 }}
-          className="cursor-pointer"
+        <motion.button
+          className="px-3 py-3 bg-gray-800 text-white rounded-full shadow-lg flex items-center space-x-2"
           onClick={() =>
-            window.open(
-              'https://www.facebook.com/leduytien0801/?locale=vi_VN',
-              '_blank'
-            )
+            setTheme(resolvedTheme === DARK_MODE ? LIGHT_MODE : DARK_MODE)
           }
+          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1 }}
+          animate={{
+            backgroundColor:
+              resolvedTheme === DARK_MODE ? '#1e293b' : 'rgb(255 181 56)',
+          }}
+          transition={{ duration: 0.3 }}
         >
-          <Facebook color={SOCIAL_NETWORK_COLOR} size={24} />
-        </motion.div>
-
-        <motion.div
-          whileHover={{ scale: 1.2, rotate: 5 }}
-          transition={{ type: 'spring', stiffness: 300 }}
-          className="cursor-pointer"
-          onClick={() =>
-            window.open('https://github.com/TienLD-0801', '_blank')
-          }
-        >
-          <Github color={SOCIAL_NETWORK_COLOR} size={24} />
-        </motion.div>
+          <motion.span
+            animate={{ rotate: resolvedTheme === DARK_MODE ? 180 : 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {resolvedTheme === DARK_MODE ? (
+              <Moon
+                size={18}
+                color={SOCIAL_NETWORK_COLOR}
+                className="text-gray-180"
+              />
+            ) : (
+              <Sun
+                size={18}
+                color={SOCIAL_NETWORK_COLOR}
+                className="text-blue-500"
+              />
+            )}
+          </motion.span>
+        </motion.button>
       </motion.div>
-      <motion.button
-        className="px-3 py-2 bg-gray-800 text-white rounded-full shadow-lg flex items-center space-x-2"
-        onClick={() => setDarkMode(!darkMode)}
-        whileTap={{ scale: 0.9 }}
-        animate={{ backgroundColor: darkMode ? '#1e293b' : '#f59e0b' }}
-        transition={{ duration: 0.3 }}
-      >
-        <motion.span
-          animate={{ rotate: darkMode ? 180 : 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          🌙
-        </motion.span>
-      </motion.button>
     </div>
   );
 }

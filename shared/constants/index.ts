@@ -7,3 +7,7 @@ export const DATE_DIFF = {
 
 // Color Icon Social network
 export const SOCIAL_NETWORK_COLOR = '#c561f6';
+
+// Dark mode
+export const DARK_MODE = 'dark';
+export const LIGHT_MODE = 'light';
