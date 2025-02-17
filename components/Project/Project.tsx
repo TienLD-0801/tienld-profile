@@ -1,23 +1,117 @@
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+'use client';
 
-const portfolioItems = [
+import { motion } from 'framer-motion';
+
+const projects = [
   {
     id: 1,
-    title: 'Project Management App',
+    title: 'Human Resource Management',
+    company: 'Vitalify Asia',
     description:
-      'A full-stack web application for managing projects and tasks.',
-    imageUrl: '/project1.jpg',
-    technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
-    link: 'https://github.com/example/project1',
+      'A web app for managing human resources, including facial check-in, leave management, payroll processing, and performance tracking.',
+    technologies: ['VueJS', 'Vuetify', 'Quasar', 'MySQL', 'AWS'],
+    duration: '06/2022 - 08/2022',
+    teamSize: 8,
   },
   {
     id: 2,
-    title: 'E-commerce Platform',
-    description: 'Modern e-commerce solution with real-time inventory.',
-    imageUrl: '/project2.jpg',
-    technologies: ['Next.js', 'TailwindCSS', 'PostgreSQL'],
-    link: 'https://github.com/example/project2',
+    title: 'Blood Pressure Monitoring',
+    company: 'Vitalify Asia',
+    description:
+      'A web app to measure blood pressure and monitor health, mainly used in Japan. Features include data visualization, AI-based recommendations, and real-time tracking.',
+    technologies: ['ReactJS', 'Framework7', 'Mobx'],
+    duration: '06/2022 - 08/2022',
+    teamSize: 10,
+  },
+  {
+    id: 3,
+    title: 'Giving Medicine To Children',
+    company: 'Vitalify Asia',
+    description:
+      'A web app to help parents monitor child care progress and give medicine on time, integrated with smart reminders and health reports.',
+    technologies: ['ReactJS', 'TypeScript', 'Framework7', 'Redux'],
+    duration: '06/2023 - 08/2023',
+    teamSize: 6,
+  },
+  {
+    id: 4,
+    title: 'Online English Teaching',
+    company: 'Vitalify Asia',
+    description:
+      'An English learning web app for users of all ages to improve communication skills with AI-assisted tutors and real-time feedback.',
+    technologies: ['ReactJS', 'NextJS', 'TypeScript', 'Redux'],
+    duration: '06/2023 - 11/2023',
+    teamSize: 6,
+  },
+  {
+    id: 5,
+    title: 'Blood Pressure Monitoring (PWA)',
+    company: 'Vitalify Asia',
+    description:
+      'Enhancing an existing health monitoring project by converting to a PWA with offline features, better performance, and seamless synchronization.',
+    technologies: ['ReactJS', 'Framework7', 'AWS Lambda', 'Firebase', 'PWA'],
+    duration: '11/2023 - 02/2024',
+    teamSize: 4,
+  },
+  {
+    id: 6,
+    title: 'Hanover AI',
+    company: 'Bnk Solution',
+    description:
+      'A web application to test facial recognition analyzing human movement and corresponding voice, color recognition, human action gestures through camera',
+    technologies: ['NuxtJs', 'TypeScript', 'Pinia'],
+    duration: '04/2024 - 06/2024',
+    teamSize: 10,
+  },
+  {
+    id: 7,
+    title: 'Temi Robot AI',
+    company: 'Bnk Solution',
+    description:
+      'Implement code flow for temi robot to perform image processing tasks such as: light bulbs, lost items using multi-stream camera, and assigned tasks via JSON file',
+    technologies: ['ReactJS', 'TypeScript','Mobx', 'Python', 'Django'],
+    duration: '06/2024 - 10/2024',
+    teamSize: 10,
+  },
+  {
+    id: 8,
+    title: 'Chat Bot AI',
+    company: 'Bnk Solution',
+    description:
+      'Process workflow integrated with AI chatbot to perform data retrieval tasks provided by the Bank and provide results to serve users.',
+    technologies: ['NextJS', 'TypeScript', 'Redux', 'Python'],
+    duration: '10/2024 - 12/2024',
+    teamSize: 10,
+  },
+  {
+    id: 9,
+    title: 'Idp AI Product',
+    company: 'Bnk Solution',
+    description:
+      'Document verification (PDF, Image) and tracking, integrated with AI-based security and real-time monitoring, accurately verify uploaded files to analyze the accuracy of the files uploaded by users',
+    technologies: ['ReactJS', 'TypeScript', 'NestJS', 'Antd Design', 'Mobx'],
+    duration: '10/2024 - present',
+    teamSize: 10,
+  },
+  {
+    id: 10,
+    title: 'Metadata Management System',
+    company: 'Bnk Solution',
+    description:
+      'Metadata management system, gets information from AI to serve hierarchical management of folders and files, gets information from files to generate data for folders',
+    technologies: ['ReactJS', 'TypeScript', 'NestJS', 'Antd Design', 'Zustand'],
+    duration: '10/2024 - present',
+    teamSize: 10,
+  },
+  {
+    id: 11,
+    title: 'Workflow Management System',
+    company: 'Bnk Solution',
+    description:
+      'Process user-created workflows to perform a certain task, for example: defining an invoice process, or processing a bank card opening process...',
+    technologies: ['ReactJS', 'TypeScript', 'NestJS', 'Antd Design', 'Zustand'],
+    duration: '10/2024 - present',
+    teamSize: 10,
   },
 ];
 
@@ -27,44 +121,31 @@ export function Project() {
       <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-8">
         Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {portfolioItems.map((item) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((item) => (
           <motion.div
             key={item.id}
-            className="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white transform transition duration-300 hover:shadow-2xl hover:-translate-y-2"
+            className="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white transform transition duration-300 hover:shadow-2xl hover:-translate-y-2 p-6"
             whileHover={{ scale: 1.03 }}
           >
-            <Image
-              width={400}
-              height={250}
-              src={item.imageUrl}
-              alt={item.title}
-              className="w-full h-56 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold">{item.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 mt-2">
-                {item.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {item.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-blue-500 dark:text-blue-400 font-medium mt-4 hover:underline"
-              >
-                View Project →
-              </a>
+            <h3 className="text-2xl font-semibold">{item.title}</h3>
+            <p className="text-gray-500 text-sm">{item.company}</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-2">
+              {item.description}
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              {item.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
+            <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
+              🕒 {item.duration} | 👥 Team Size: {item.teamSize}
+            </p>
           </motion.div>
         ))}
       </div>
