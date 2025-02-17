@@ -22,8 +22,9 @@ export default function ControlPanel() {
   if (!mounted) return null;
 
   return (
-    <div className="flex space-x-4 items-center justify-between">
-      <header className="p-3 flex justify-between items-center">
+    <div className="flex flex-col md:flex-row items-center justify-between p-3 space-y-4 md:space-y-0">
+      {/* Logo */}
+      <header className="flex justify-center md:justify-start w-full">
         <motion.div
           whileHover={{ scale: 1.05 }}
           className="flex items-center gap-2 cursor-pointer"
@@ -32,12 +33,14 @@ export default function ControlPanel() {
           <motion.div>
             <Terminal color={SOCIAL_NETWORK_COLOR} size={24} />
           </motion.div>
-          <motion.span className="text-2xl font-bold tracking-wide whitespace-pre">
-            Welcome 🚀🚀🚀
+          <motion.span className="text-2xl font-bold tracking-wide">
+            Welcome 🚀
           </motion.span>
         </motion.div>
       </header>
-      <motion.div className="flex items-center justify-center space-x-6">
+
+      {/* Social & Theme Switcher */}
+      <motion.div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
         {/* Social Icons */}
         <motion.div className="flex space-x-4">
           {[
@@ -69,6 +72,7 @@ export default function ControlPanel() {
           ))}
         </motion.div>
 
+        {/* Dark Mode Toggle */}
         <motion.button
           className="px-3 py-3 bg-gray-800 text-white rounded-full shadow-lg flex items-center space-x-2"
           onClick={() =>
@@ -87,17 +91,9 @@ export default function ControlPanel() {
             transition={{ duration: 0.5 }}
           >
             {resolvedTheme === DARK_MODE ? (
-              <Moon
-                size={18}
-                color={SOCIAL_NETWORK_COLOR}
-                className="text-gray-180"
-              />
+              <Moon size={18} color={SOCIAL_NETWORK_COLOR} />
             ) : (
-              <Sun
-                size={18}
-                color={SOCIAL_NETWORK_COLOR}
-                className="text-blue-500"
-              />
+              <Sun size={18} color={SOCIAL_NETWORK_COLOR} />
             )}
           </motion.span>
         </motion.button>

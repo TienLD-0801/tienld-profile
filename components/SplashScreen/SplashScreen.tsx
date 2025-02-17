@@ -108,7 +108,7 @@ export default function SplashScreen() {
             whileTap={{ scale: 0.9 }}
             onClick={handleStart}
           >
-            Get Started 🚀🚀🚀
+            Get Started 🚀
           </motion.button>
 
           <style jsx>{`

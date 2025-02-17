@@ -66,7 +66,7 @@ export default function About() {
                 <a
                   href="https://github.com/TienLD-0801"
                   target="_blank"
-                  className="text-blue-400 hover:text-white transition"
+                  className="hover:text-blue-400 dark:hover:text-white transition"
                 >
                   GitHub
                 </a>
@@ -76,7 +76,7 @@ export default function About() {
                 <a
                   href="https://www.linkedin.com/in/tienld"
                   target="_blank"
-                  className="text-blue-400 hover:text-white transition"
+                  className="hover:text-blue-400 dark:hover:text-white transition"
                 >
                   LinkedIn
                 </a>
@@ -86,7 +86,7 @@ export default function About() {
                 <a
                   href="https://www.facebook.com/leduytien0801"
                   target="_blank"
-                  className="text-blue-400 hover:text-white transition"
+                  className="hover:text-blue-400 dark:hover:text-white transition"
                 >
                   Facebook
                 </a>
