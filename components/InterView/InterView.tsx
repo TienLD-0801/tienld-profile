@@ -1,8 +1,10 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Terminal } from 'lucide-react';
 import Image from 'next/image';
 
-export function InterView() {
+export default function InterView() {
   return (
     <section className="p-6 flex flex-col md:flex-row items-center justify-center gap-6 max-w-5xl mx-auto text-center md:text-left">
       <div>

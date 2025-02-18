@@ -23,7 +23,6 @@ export default function ControlPanel() {
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-between p-3 space-y-4 md:space-y-0">
-      {/* Logo */}
       <header className="flex justify-center md:justify-start w-full">
         <motion.div
           whileHover={{ scale: 1.05 }}
@@ -39,9 +38,7 @@ export default function ControlPanel() {
         </motion.div>
       </header>
 
-      {/* Social & Theme Switcher */}
       <motion.div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-        {/* Social Icons */}
         <motion.div className="flex space-x-4">
           {[
             {
@@ -71,8 +68,6 @@ export default function ControlPanel() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Dark Mode Toggle */}
         <motion.button
           className="px-3 py-3 bg-gray-800 text-white rounded-full shadow-lg flex items-center space-x-2"
           onClick={() =>
