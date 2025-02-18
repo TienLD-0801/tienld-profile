@@ -57,6 +57,7 @@ export default function InterView() {
           width={450}
           height={500}
           className="w-full h-full object-cover"
+          priority
         />
       </motion.div>
     </section>

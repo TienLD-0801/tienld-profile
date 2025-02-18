@@ -34,7 +34,7 @@ export default function ScrollButton() {
     <>
       {isAtTop && (
         <motion.button
-          className="fixed bottom-5 right-5 p-3 bg-gray-700 text-white rounded-full shadow-lg hover:bg-gray-900 transition-all dark:bg-[#1e293b] dark:text-white"
+          className="fixed bottom-5 right-5 p-3 bg-gray-700 text-white rounded-full shadow-lg hover:bg-gray-900 transition-all dark:bg-[#1e293b] dark:text-white z-[100]"
           whileHover={{ scale: 1.1 }}
           onClick={() => scrollTo('bottom')}
         >
@@ -44,7 +44,7 @@ export default function ScrollButton() {
 
       {isAtBottom && (
         <motion.button
-          className="fixed bottom-5 right-5 p-3 bg-gray-700 text-white rounded-full shadow-lg hover:bg-gray-900 transition-all dark:bg-[#1e293b] dark:text-white"
+          className="fixed bottom-5 right-5 p-3 bg-gray-700 text-white rounded-full shadow-lg hover:bg-gray-900 transition-all dark:bg-[#1e293b] dark:text-white z-[100]"
           whileHover={{ scale: 1.1 }}
           onClick={() => scrollTo('top')}
         >
