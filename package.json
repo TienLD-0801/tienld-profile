@@ -11,7 +11,7 @@
   "dependencies": {
     "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.7.9",
-    "framer-motion": "^12.4.2",
+    "framer-motion": "^12.4.5",
     "i18next": "^24.2.2",
     "lodash": "^4.17.21",
     "lucide-react": "^0.475.0",
