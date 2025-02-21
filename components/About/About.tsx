@@ -42,13 +42,13 @@ export default function About() {
           </div>
 
           {/* Experience */}
-          <div className="mt-6">
+          <div className="mt-5">
             <h3 className="text-xl font-semibold text-[#c561f6]">Experience</h3>
-            <p className="text-gray-400 mt-2">
-              🚀 Frontend Developer - Vitalify Asia (2022 - 2024)
-            </p>
             <p className="text-gray-400">
               🚀 Senior Frontend Developer - Bnk Solution (2024 - Present)
+            </p>
+            <p className="text-gray-400 mt-2">
+              🚀 Frontend Developer - Vitalify Asia (2022 - 2024)
             </p>
           </div>
 

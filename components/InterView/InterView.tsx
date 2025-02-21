@@ -2,7 +2,7 @@
 
 import { SESSION_ABOUT, SESSION_PROJECT } from '@/shared/constants';
 import { motion } from 'framer-motion';
-import { Terminal } from 'lucide-react';
+import { Download, Terminal } from 'lucide-react';
 import Image from 'next/image';
 
 export default function InterView() {
@@ -14,6 +14,15 @@ export default function InterView() {
     } else {
       console.warn('Section not found:', sectionId);
     }
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/leduytien_08_01_2000_cv.pdf';
+    link.setAttribute('download', 'leduytien_08_01_2000_cv.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -42,6 +51,13 @@ export default function InterView() {
             onClick={() => scrollToSection(SESSION_PROJECT)}
           >
             <Terminal color="#ffffff" /> Project
+          </motion.span>
+          <motion.span
+            whileHover={{ scale: 1.1 }}
+            className="flex items-center gap-2 bg-[#732dd9] text-white px-4 py-2 rounded-full cursor-pointer"
+            onClick={handleDownload}
+          >
+            <Download color="#ffffff" /> Download CV
           </motion.span>
         </motion.div>
       </div>
