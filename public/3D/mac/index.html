@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  </head>
+  <body>
+    <script type="module" src="./index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <div class="menu-bar">
+      <div class="left">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Apple_logo_white.svg/1010px-Apple_logo_white.svg.png"
+          class="apple-logo" alt>
+        <span class="menus active">TienLe's Mac</span>
+        <span class="menus">File</span>
+        <span class="menus">Edit</span>
+        <span class="menus">View</span>
+        <span class="menus">Go</span>
+        <span class="menus">Window</span>
+        <span class="menus">Help</span>
+      </div>
+      <div class="right">
+
+        <div class="menu-ico">
+          <img
+            src="https://freepngimg.com/download/united_states/76187-sound-information-united-business-states-address-email.png"
+            alt class="vol">
+        </div>
+        <div class="menu-ico" style="font-size: 20px; margin-top:10px;">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div class="menu-ico" style="font-size: 20px; margin-top:10px;">
+          <i class="fa fa-bluetooth-b" aria-hidden="true"></i>
+        </div>
+        <div class="menu-ico" style="font-size: 16px; margin-top:15px;">
+          <i class="fa fa-wifi" aria-hidden="true"></i>
+        </div>
+        <div class="menu-ico">
+          <img
+            src="https://eshop.macsales.com/blog/wp-content/uploads/2021/03/control-center-icon.png"
+            alt class="control-center">
+        </div>
+        <div class="menutime">
+        </div>
+      </div>
+    </div>
+
+    <div class="dock">
+      <center>
+        <div class="dock-container">
+          <li class="li-1">
+            <div class="name">Finder</div>
+            <img class="ico" src="images/macos-finder.png" alt>
+          </li>
+          <li class="li-2">
+            <div class="name">Siri</div>
+            <img class="ico" src="images/apple-siri.png" alt>
+          </li>
+          <li class="li-3">
+            <div class="name">LaunchPad</div>
+            <img class="ico" src="images/macos-launchpad.png" alt>
+          </li>
+          <li class="li-4">
+            <div class="name">Contacts</div>
+            <img class="ico" src="images/contacts.png" alt>
+          </li>
+          <li class="li-5">
+            <div class="name">Notes</div>
+            <img class="ico" src="images/notes.png" alt>
+          </li>
+          <li class="li-6">
+            <div class="name">Reminders</div>
+            <img class="ico" src="images/macos-reminders.png" alt>
+          </li>
+          <li class="li-7">
+            <div class="name">Photos</div>
+            <img class="ico" src="images/macos-photos.png" alt>
+          </li>
+          <li class="li-8">
+            <div class="name">Messages</div>
+            <img class="ico" src="images/messages.png" alt>
+          </li>
+          <li class="li-9">
+            <div class="name">FaceTime</div>
+            <img class="ico" src="images/facetime.png" alt>
+          </li>
+          <li class="li-10">
+            <div class="name">Music</div>
+            <img class="ico" src="images/Apple_Music_icon.png" alt>
+          </li>
+          <li class="li-11">
+            <div class="name">Podcasts</div>
+            <img class="ico" src="images/applepodcasts.png" alt>
+          </li>
+          <li class="li-12">
+            <div class="name">TV</div>
+            <img class="ico" src="images/appletv.png" alt>
+          </li>
+          <li class="li-12">
+            <div class="name">App Store</div>
+            <img class="ico" src="images/appstore.png" alt>
+          </li>
+          <li class="li-14">
+            <div class="name">Safari</div>
+            <img class="ico" src="images/apple-safari.png" alt>
+          </li>
+          <li class="li-bin li-15">
+            <div class="name">Bin</div>
+            <img class="ico ico-bin" src="images/bin.png" alt>
+          </li>
+        </div>
+      </center>
+    </div>
+    <div class="folder-icon" id="folderIcon"><img src="images/mac-folder.png"
+        alt></div>
+    <div class="folder-name" id="folderName"><span
+        style="font-family: San Francisco">Le Duy Tien</span></div>
+    <div class="window" id="folderWindow">
+      <div class="titlebar">
+        <div class="buttons">
+          <div class="close" id="closeBtn">
+            <span><strong>x</strong></span>
+          </div>
+          <div class="minimize" id="minimizeBtn">
+            <span><strong>&ndash;</strong></span>
+          </div>
+          <div class="zoom" id="zoomBtn">
+            <span><strong>+</strong></span>
+          </div>
+        </div>
+        About-Me Folder
+      </div>
+      <div class="window-content">
+        <div class="sidebar-container">
+          <div class="sidebar">
+            <div class="section" id="aboutSection">About</div>
+            <div class="section" id="skillsSection">Skills</div>
+            <div class="section" id="projectsSection">Projects</div>
+            <div class="section" id="workSection">Work</div>
+            <div class="section" id="contactSection">Contact</div>
+          </div>
+        </div>
+        <div class="content" id="content">
+          <center><h3>TienLeDuy</h3></center>
+          <!-- <p>Creative Developer|Content Writer|AI-ML programmer<br> -->
+            <a
+              href
+              target='_blank' rel='noopener noreferrer'><button
+                class="resume-button">View Resume</button></a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

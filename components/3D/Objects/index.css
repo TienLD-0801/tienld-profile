@@ -1,0 +1,135 @@
+html,
+body,
+#root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.gltf iframe {
+  width: 1250px;
+  height: 700px;
+}
+body {
+  background: #95a6e8;
+}
+
+button {
+  background: inherit;
+  /* Set the button background color to white */
+  color: white; /* Set the button text color to blue */
+  font-weight: bold;
+  border: 2px solid white; /* Set a pale blue outline for the button */
+  border-radius: 20px; /* Add rounded corners to the button */
+  padding: 10px 30px; /* Add some padding to the button */
+  cursor: pointer; /* Change the cursor to a pointer on hover to indicate interactivity */
+  transition: background-color 0.3s, border 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+  box-shadow: 0 4px 6px -3px #003366;
+  margin-top: 200px;
+}
+
+button:hover {
+  background: linear-gradient(
+    #4e63d9,
+    #abb6f3
+  ); /* Change the background color on hover to pale blue */
+  border: 2px solid #2e41b0; /* Change the border color to white on hover */
+  color: white; /* Change the text color to white on hover */
+  box-shadow: 0 6px 10px 0 #002250;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+/* .header{
+  margin-top:-390px;
+  margin-left:-700px;
+
+} */
+
+.header h1 {
+  display: flex;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Set the font-family to Montserrat */
+  font-weight: bold; /* Make the text bold */
+  color: white; /* Set the deep blue color */
+  text-shadow: 6px 4px 4px #0529a0;
+  border: white;
+  z-index: 1;
+}
+
+/* Styling for the paragraph */
+.header p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  color: whitesmoke;
+  text-shadow: 4px 4px 2px #062b88; /* Set the text color to white */
+  font-weight: bold;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+.header music-button {
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  margin-top: 10px;
+}
+/* @media screen and(max-width:768px){
+   .header{
+    margin-left:10px;
+   }
+
+} */
+
+/* .loading{
+  position:absolute;
+  align-items: center;
+  justify-content: center;
+  top:50%;
+  left:50%;
+} */
+/* .header,
+.buttons,
+.gltf iframe{
+  opacity:1;
+}
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; /* Adjust the transition duration and timing function */
+
+/* .header.fadeIn,
+.buttons.fadeIn {
+  opacity: 1;
+} */
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.header {
+  gap: 30px;
+}
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+button[title]:hover::before {
+  content: attr(title);
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px;
+  background-color: inherit;
+  color: #fff;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition-delay: 0s;
+}
