@@ -44,8 +44,10 @@ export default function About() {
               <li>⚡ HTML, CSS, SCSS, TypeScript</li>
               <li>⚡ React, Next.js, Vue.js, NuxtJS</li>
               <li>⚡ Node.js, NestJS, FastAPI</li>
-              <li>⚡ PostgreSQL, MongoDB, Redis, Elasticsearch</li>
-              <li>⚡ Git, Docker, CI/CD, AWS, Microservices</li>
+              <li>
+                ⚡ PostgreSQL, MongoDB, MySql, Firebase, Redis, Elasticsearch
+              </li>
+              <li>⚡ Git, Vite, Webpack, Umijs, Docker, CI/CD, AWS, Microservices</li>
             </ul>
           </div>
 

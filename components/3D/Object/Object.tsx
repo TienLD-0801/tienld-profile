@@ -2,7 +2,6 @@ import { OrbitControls, Html } from '@react-three/drei';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { useRef } from 'react';
-// import { button, folder, useControls } from "leva"
 
 export default function Object() {
   const fullScreen = useLoader(GLTFLoader, './scene.gltf');

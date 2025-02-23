@@ -93,10 +93,10 @@ export default function SplashScreen() {
           </div>
 
           <motion.button
-            className="mt-12 sm:mt-16 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-red-600 to-blue-500 text-white text-lg sm:text-xl font-extrabold rounded-lg shadow-md tracking-wider uppercase border border-white cursor-pointer z-10"
+            className="mt-12 sm:mt-16 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-red-600 to-blue-500 text-white text-lg sm:text-xl font-extrabold rounded-lg shadow-md tracking-wider uppercase border cursor-pointer z-10"
             animate={{
-              y: [0, -10, 0],
-              scale: [1, 1.05, 1],
+              y: [0, -5, 0],
+              scale: [1, 1.03, 1],
             }}
             transition={{
               duration: 1,
