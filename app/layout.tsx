@@ -3,6 +3,7 @@ import { LayoutGroup } from 'framer-motion';
 import Head from 'next/head';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 import { Providers } from './providers';
 import './globals.css';
 
@@ -49,6 +50,7 @@ export default function RootLayout({
           <LayoutGroup>
             {children}
             <SpeedInsights />
+            <Analytics />
           </LayoutGroup>
         </Providers>
       </body>
