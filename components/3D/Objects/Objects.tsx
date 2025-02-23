@@ -23,7 +23,7 @@ export default function Objects() {
       setLoading(false);
     }, 4000);
 
-    setBgAudio(new Audio('./catbgaudio.mp3'));
+    setBgAudio(new Audio('./catBgAudio.mp3'));
     setTransitAudio(new Audio('./whoosh.mp3'));
   }, []);
 
