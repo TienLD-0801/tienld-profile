@@ -7,7 +7,7 @@ interface ProjectProps {
   projects: ProjectData[]
 }
 
-export default function Project({ projects }: ProjectProps) {
+export default function Project({ projects }: Readonly<ProjectProps>) {
   return (
     <div className="py-12 px-6 max-w-5xl mx-auto">
       <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-8">
