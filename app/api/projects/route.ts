@@ -171,7 +171,7 @@ const projects: ProjectData[] = [
 
 export async function GET(): Promise<Response> {
   try {
-    console.log('tienld');
+    console.log("Fetching data on server...");
     return NextResponse.json(projects);
   } catch (err) {
     return NextResponse.json(
