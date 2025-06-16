@@ -17,7 +17,7 @@
     "@types/three": "^0.176.0",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "axios": "^1.9.0",
+    "axios": "^1.10.0",
     "framer-motion": "^12.10.0",
     "i18next": "^25.2.1",
     "lodash": "^4.17.21",
