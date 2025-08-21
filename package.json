@@ -19,7 +19,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.11.0",
     "framer-motion": "^12.23.12",
-    "i18next": "^25.3.6",
+    "i18next": "^25.4.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.540.0",
     "next": "15.5.0",
