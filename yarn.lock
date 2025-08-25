@@ -447,10 +447,10 @@
   resolved "https://registry.yarnpkg.com/@nolyfill/is-core-module/-/is-core-module-1.0.39.tgz#3dc35ba0f1e66b403c00b39344f870298ebb1c8e"
   integrity sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==
 
-"@react-three/drei@^10.7.3":
-  version "10.7.3"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-10.7.3.tgz#f551243a6104c6e2a4d5749bd77813b659949871"
-  integrity sha512-Krq6rRkBdOb9CfVOlYJqjoweSjX0mvj0fnXt1OGphCG8WA7cv8E0WB6XPuURklqVfdHmDB5wfnpXTHB+KFaGfA==
+"@react-three/drei@^10.7.4":
+  version "10.7.4"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-10.7.4.tgz#fc68a667ec06c69e89b8755545701d09dcb9ad9a"
+  integrity sha512-awojw2DAwmQmAXawNNcBmVJnXzIhsuCRm8pELAdETzPVA6jIHj0Mlm4Ce8fjtJpFEIoTgLOaQ8iYROiOA2ZN6g==
   dependencies:
     "@babel/runtime" "^7.26.0"
     "@mediapipe/tasks-vision" "0.10.17"
