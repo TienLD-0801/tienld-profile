@@ -1886,10 +1886,10 @@ form-data@^4.0.4:
     hasown "^2.0.2"
     mime-types "^2.1.12"
 
-framer-motion@^12.23.12:
-  version "12.23.12"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.23.12.tgz#80cf6fd7c111073a0c558e336c85ca36cca80d3d"
-  integrity sha512-6e78rdVtnBvlEVgu6eFEAgG9v3wLnYEboM8I5O5EXvfKC8gxGQB8wXJdhkMy10iVcn05jl6CNw7/HTsTCfwcWg==
+framer-motion@^12.23.14:
+  version "12.23.14"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.23.14.tgz#43933a4f275c4c917ab1a75c1959d81fff30a326"
+  integrity sha512-8BQ6dvqOht2w8P1CwIEvAA0gypDR3fNG/M6/f5lT0QgNIKnJf7J43Bpv++NnCWU8YfmL47UEm2hbI0GRvdVhsQ==
   dependencies:
     motion-dom "^12.23.12"
     motion-utils "^12.23.6"
