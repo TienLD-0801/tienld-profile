@@ -40,7 +40,7 @@
     "@types/react-dom": "^19",
     "baseline-browser-mapping": "^2.9.11",
     "eslint": "^9",
-    "eslint-config-next": "16.0.1",
+    "eslint-config-next": "16.1.1",
     "postcss": "^8",
     "tailwindcss": "^4.1.16",
     "typescript": "^5"
